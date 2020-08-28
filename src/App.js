@@ -9,7 +9,7 @@ class Contact extends Component {
       message: "",
     },
     sent: false,
-    buttonText: "Send Message",
+    buttonText: "Send Msg",
   };
 
   setData = (input, event) => {
