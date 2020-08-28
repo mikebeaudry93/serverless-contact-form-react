@@ -26,10 +26,9 @@ class Contact extends Component {
       buttonText: "...sending",
     });
     let data = this.state.formData;
-    console.log(data);
 
     axios
-      .post("https://serverless-contact-from-axios-k8i6cqkx9.vercel.app/", data)
+      .post("https://serverless-contact-from-axios-dmwgtjot1.vercel.app/", data)
       .then((res) => {
         this.setState({ sent: true }, this.resetForm());
       })
@@ -40,6 +39,11 @@ class Contact extends Component {
 
   resetForm = () => {
     this.setState({
+      formData: {
+        name: "",
+        email: "",
+        message: "",
+      },
       buttonText: "Message Sent",
     });
   };
