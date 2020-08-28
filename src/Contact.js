@@ -28,7 +28,7 @@ class Contact extends Component {
     let data = this.state.formData;
 
     axios
-      .post("API_URI", data)
+      .post("https://serverless-contact-from-axios-ejvr0xudi.vercel.app/", data)
       .then((res) => {
         this.setState({ sent: true }, this.resetForm());
       })
